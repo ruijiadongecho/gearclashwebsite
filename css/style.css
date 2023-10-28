@@ -1,0 +1,741 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header */
+
+header {
+  height: 80px;
+  padding: 5px 50px;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  background-color: #f8ad52;
+}
+
+#logo {
+  height: 70px;
+  padding-right: 40px;
+}
+
+.desktop-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.desktop-nav ul li {
+  padding: 0 20px;
+  width: 120px;
+}
+
+.desktop-nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/*
+.desktop-nav ul li a:hover {
+  text-decoration: underline;
+}
+*/
+
+.desktop-nav ul li a.active {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 0px 20px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .mobile-nav i {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 30px;
+    color: black;
+  }
+
+  .dropdown {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index:1;
+  }
+
+  .dropdown li {
+    display: block;
+    padding: 10px;
+    background-color: bisque;
+    width: 100%;
+  }
+
+  .dropdown :hover {
+    background-color: #f8b86a;
+  }
+
+  .dropdown a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+/* Banner */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 380px;
+  background-color: #f8ad52;
+  background-image: url("../img/poster_concept.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.banner * {
+  margin: 10px 30px;
+}
+
+.banner h1 {
+  font-size: 48px;
+}
+
+/* Countdown Section */
+
+.countdown {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.countdown-left-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px;
+}
+
+.countdown-right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.countdown-left-section img {
+  width: 250px;
+  /*transition: all 150ms ease-in-out;*/
+}
+
+.countdown-left-section div {
+  width: 290px;
+}
+
+@media (max-width: 480px) {
+  .countdown {
+    flex-direction: column;
+  }
+  .countdown-left-section img {
+    width: 180px;
+    /*transition: all 150ms ease-in-out;*/
+  }
+  .countdown-left-section {
+    font-size: 12px;
+  }
+}
+
+/* Value Section */
+
+.value-title {
+  background-color: #f8ad52;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 40px;
+}
+
+.value-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #f8ad52;
+  padding: 40px;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-card img {
+  width: 260px;
+  height: 360px;
+  object-fit: cover;
+}
+
+/*
+1120px is not a normal breakpoint, this is a special break point just to prevent
+flex wrap to have 3 cards in a row.
+*/
+@media (max-width: 1120px) {
+  .image-card {
+    flex-basis: 50%;
+  }
+}
+
+/* Comment Section */
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  
+}
+.comment div {
+  padding: 40px;
+
+}
+
+.comment img {
+  width: 420px;
+  height: 300px;
+}
+
+@media (max-width: 1024px) {
+  .comment {
+    flex-direction: column;
+  }
+
+  .comment img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .comment div {
+    padding: 20px;
+  }
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  padding: 40px;
+}
+
+
+.footer-column {
+  flex: 30%;
+  padding-right: 20px;
+}
+
+.footer-column p i {
+  padding-right: 10px;
+}
+
+.footer-column div img{
+  height: 40px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+.footer-dot {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+
+/* About page */
+
+/* Page title */
+/*
+.page-title-about {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+*/
+.about-gear-clash-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.about-gear-clash-left-section {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.about-gear-clash-left-section img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-gear-clash-right-section-container {
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  position: relative;
+}
+
+.about-gear-clash-right-section-top-image,
+.about-gear-clash-right-section-bottom-image {
+  position: relative;
+}
+
+.about-gear-clash-right-section-top-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-gear-clash-right-section-bottom-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+@media (max-width: 1024px) {
+  .about-gear-clash-container {
+    flex-direction: column;
+    z-index:-1;
+  }
+
+  .about-gear-clash-left-section img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Battle event Section */
+
+.battle-event {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  margin-top: 40px;
+}
+.battle-event div {
+  padding: 40px;
+}
+
+.battle-event img {
+  width: 420px;
+  height: 300px;
+}
+
+@media (max-width: 1024px) {
+  .battle-event {
+    flex-direction: column;
+  }
+
+  .battle-event img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .battle-event div {
+    padding: 20px;
+  }
+}
+
+/* Carousel section */
+/*
+* {
+  box-sizing: border-box;
+}
+*/
+.carousel_text{
+  padding-top:40px;
+  padding-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  /* background-color: #f2f2f2; */
+  /* margin-bottom: -40px;*/
+}
+
+.mySlides {
+  display: none;
+  background-color: #f2f2f2;
+}
+img {
+  vertical-align: middle;
+  margin:0;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin:0;
+  background-color: #f2f2f2;
+}
+
+/* Caption text */
+/*
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+*/
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+/*
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+*/
+/* Agenda page */
+
+/* Page title */
+/*
+.agenda_body{
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,100),
+    rgba(255,255,255,100)250px,
+    rgba(248,173,82,0.5)250px,
+    rgba(248,173,82,0.5)600px
+  );
+}
+*/
+
+.agenda_body{
+  background-image: url("../img/agenda.jpg");
+  background-size:contain;
+  /*background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url("../img/_background 1.png");*/
+}
+.page-title-agenda {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-image: linear-gradient(#f8ad52,purple);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -14px;
+  background-color: white;
+  border: 4px solid #f8ad52;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+.container img {
+  width:100%;
+}
+
+/* Add arrows to the left container (pointing right) */
+/*
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #000000;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #000000;
+}
+*/
+
+/* Add arrows to the right container (pointing left) */
+/*
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #ffffff;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+*/
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left:-14px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background: rgb(248, 173, 82);
+  position: relative;
+  border-radius: 6px 6px 0px 0px;
+}
+
+/* Media queries - Responsive timeline on screens less than 480px wide */
+@media screen and (max-width: 480px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+
+
+/* Register page */
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #f8ad52;
+  border-style: none none solid none;
+  border-radius: 0px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #f8ad52;
+  color: #000000;
+  padding: 14px 20px;
+  margin: 8px auto;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #e5f13b;
+}
+
+.register-form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color:#f2f2f2;*/ 
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/web_1ori.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+}
+
+.form-title {
+  width:50%;
+  padding:20px;
+  margin:0px;
+  border-radius: 20px 20px 0 0;
+  text-align:center;
+  background-color: #ffffff;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom:  40px;
+  border-radius: 0 0 20px 20px;
+}
+::placeholder{
+  color: #9e9e9e;
+}
+
+.form-button{
+  margin-top:20px;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+@media (max-width: 1024px) {
+  .form-title{
+    width: 80%;
+  }
+  .register-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-title{
+    width: 90%;
+  }
+  .register-form {
+    width: 90%;
+  }
+}
+
+
+
