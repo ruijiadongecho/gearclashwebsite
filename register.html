@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gear clash | Home</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img id="logo" src="img/logo.png" alt="logo" />
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="agenda.html">AGENDA</a></li>
+          <li><a href="register.html">REGISTER</a></li>
+         <!-- <li><a href="news.html">NEWS</a></li> -->
+        </ul>
+      </nav>
+
+      <div class="mobile-nav">
+        <i class="fa fa-bars"></i>
+        <ul class="dropdown">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="agenda.html">AGENDA</a></li>
+          <li><a href="register.html">REGISTER</a></li>
+         <!-- <li><a href="news.html">NEWS</a></li> -->
+        </ul>
+      </div>
+    </header>
+    
+
+  <div class="register-form-container">
+     <h1 class= "form-title"> Register Now! </h1>
+      <div class="register-form">
+       <!-- <form action="/action_page.php"> -->
+        <form>
+          <label for="tname">Team Name</label>
+           <input type="text" id="tname" name="teamname" placeholder="Tech Chaos">
+        
+          <label for="cperson">Contact Person</label>
+           <input type="text" id="cperson" name="contactperson" placeholder="Bradley Rogerson">
+
+          <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="example@gmail.com">
+
+           <label for="pnumber">Phone Number</label>
+            <input type="text" id="pnumber" name="phonenumber" placeholder="+642212345678">
+
+          <label for="country">Country</label>
+            <select id="country" name="country">
+             <option value="newzealand">New Zealand</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            </select>
+            
+          <div class="form-button"> 
+            <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-column">
+      <h3>CONTACT US</h3>
+      <p>EMAIL:GEARCLASH@GMAIL.COM</p>
+      <p>CALL:+642101234567</p>
+      <p>FEEDBACK FORM</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>SOCIAL MEDIA</h3>
+      <p><i class="fab fa-facebook"></i> FACEBOOK</p >
+      <p><i class="fab fa-instagram"></i> INSTAGRAM</p >
+      <p><i class="fab fa-twitter"></i> TWITTER</p >
+      <p><i class="fab fa-youtube"></i> YOUTUBE</p >
+    </div>
+
+    <div class="footer-column">
+      <h3>SPONSORED BY</h3>
+      <div class="footer-dot"><img src="img/logo1.png" alt="sponsorlogo" /></div>
+      <div class="footer-dot"><img src="img/logo2.png" alt="sponsorlogo" /></div>
+      <div class="footer-dot"><img src="img/logo3.png" alt="sponsorlogo" /></div>
+      <div class="footer-dot"><img src="img/logo4.png" alt="sponsorlogo" /></div>
+      <br />
+    </div>
+  </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
